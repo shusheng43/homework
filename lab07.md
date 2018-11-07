@@ -35,9 +35,10 @@ PC：程序计数器，存放下一条指令在内存中的地址
 #### 2ACC 寄存器的全称与作用。
 答：ACC：累加寄存器，功能是当运算器的算术逻辑单元(ALU)执行全部算术和逻辑运算时，为ALU提供一个工作区，暂时存放ALU运算结果
 #### 3用“LOD #3”指令的执行过程，解释Fetch-Execute周期。
-答：pc=0,fetch 地址为0的指令：LOD #3 ,将指令LOD #3 储存在IR中,decode该条指令；将3寄存,PC+2,PC=2,寻找地址为2 的指令。
+答：pc=0,fetch 地址为0的指令：LOD #3 ,将指令LOD #3 储存在IR中,decode该条指令；将3寄存,PC+2,PC=2,寻找地址为2 的指令。![](images/1.png)
 #### 4用“ADD W” 指令的执行过程，解释Fetch-Execute周期。
 答：PC=8，fetch 地址为8的指令：ADD W,将该指令储存在IR中，decode该条指令，将ACC中储存的7放入寄存器，执行W +7,ACC=10,PC+2=10;寻找地址为10 的指令
+![](images/2.png)
 #### 5“LOD #3” 与 “ADD W” 指令的执行在Fetch-Execute周期级别，有什么不同。
 LOD #3仅是将3储存在ACC中
 ADD W需要调取ACC的数据与其相加
@@ -63,6 +64,8 @@ int main(){
 （1） 输入程序Program 2，运行并回答问题：
 
 #### 1用一句话总结程序的功能
+![](images/5.png)
+![](images/4.png)
 答：是一条执行三次的循环
 #### 2写出对应的 c 语言程序
 
